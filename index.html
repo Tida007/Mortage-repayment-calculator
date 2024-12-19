@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- favicon -->
+     <link rel="shortcut icon" href="./assets/images/mort-fav.png" type="image/jpg">
+     <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
+    <title>Frontend Mentor | Mortgage repayment calculator</title>
+</head>
+<body>
+    <main>
+        <article class="cal grid">
+            <section class="cal_cal container">
+                <header class="cal_header split">
+                    <h1 class="text-preset-1">Mortgage Calculator</h1>
+                    <button class="cal_clear text-preset-4">Clear All</button>
+                </header>
+                <form class="cal_form flow-content" action="" method="post">
+                    <div class="cal_form-group">
+                        <label class="text-preset-4" for="mortgage-amount">Mortgage Amount</label>
+                        <div class="input-wrapper">
+                            <div class="prefix">£</div>
+                            <input type="text" name="mortgage-amount" class="input-field" id="mortgage-amount" aria-describedby="price-currency">
+                        </div>
+                    </div>
+                    <div class="cal_form-group flow-content split">
+                        <div class="">
+                            <label class="text-preset-4" for="mortgage-term">Mortgage Term</label>
+                            <div class="input-wrapper">
+                                <input class="input-field" type="number" name="mortgage-term" id="mortgage-term">
+                                <div class="suffix">years</div>
+                            </div>
+                        </div>
+                        <div class="">
+                            <label class="text-preset-4" for="interest-rate">Interest Rate</label>
+                            <div class="input-wrapper">
+                                <input type="number" name="interest-rate" id="interest-rate" class="input-field">
+                                <div class="suffix">%</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cal_form-group radio-group" id="repayment-type">
+                        <label class="text-preset-4">Mortgage Type</label>
+                        <label class="radio-option text-preset-3" for="repayment">
+                            <input type="radio" name="mortage-type" id="repayment" value="repayment">
+                            <span>Repayment</span></label>
+                        <label class="radio-option text-preset-3" for="interest-only">
+                            <input type="radio" name="mortage-type" id="interest-only" value="interest-only"><span>Interest Only</span>
+                        </label>
+                    </div>
+
+                    <button class="cal_submit text-preset-3" type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                        <path fill="#133041"
+                            d="M18.75 2.25H5.25a1.5 1.5 0 0 0-1.5 1.5v16.5a1.5 1.5 0 0 0 1.5 1.5h13.5a1.5 1.5 0 0 0 1.5-1.5V3.75a1.5 1.5 0 0 0-1.5-1.5Zm-10.5 16.5a1.125 1.125 0 1 1 0-2.25 1.125 1.125 0 0 1 0 2.25Zm0-3.75a1.125 1.125 0 1 1 0-2.25 1.125 1.125 0 0 1 0 2.25ZM12 18.75a1.125 1.125 0 1 1 0-2.25 1.125 1.125 0 0 1 0 2.25ZM12 15a1.125 1.125 0 1 1 0-2.25A1.125 1.125 0 0 1 12 15Zm3.75 3.75a1.125 1.125 0 1 1 0-2.25 1.125 1.125 0 0 1 0 2.25Zm0-3.75a1.125 1.125 0 1 1 0-2.25 1.125 1.125 0 0 1 0 2.25Zm1.5-5.25a.75.75 0 0 1-.75.75h-9a.75.75 0 0 1-.75-.75V6a.75.75 0 0 1 .75-.75h9a.75.75 0 0 1 .75.75v3.75Z" />
+                    </svg>Calculate Repayment</button>
+                </form>
+            </section>
+            <section class="cal_results">
+                <div class="cal_results-empty flow-content container">
+                    <picture>
+                        <source src="./assets/images/illustration-empty.svg" type="image/webp">
+                        <img src="./assets/images/illustration-empty.svg" alt="Results shown here">
+                    </picture>
+                    <h2 class="text-preset-2">Results shown here</h2>
+                    <p class="text-preset-4">Complete the form and click "calculate repayments" to see what your monthly repayments would be</p>
+                </div>
+                <div class="cal_results-result hidden container flow-content">
+                    <h2 class="text-preset-2">Your results</h2>
+                    <p class="text-preset-4">Your results are shown below based on the information you provided. To adjust the results, edit the form and click "calculate repayments" again.</p>
+                    <div class="cal_results-group flow-content">
+                        <h3 class="text-preset-4">Your monthly repayments</h3>
+                        <p class="text-preset-1 monthly-payments" id="monthly-payments">£0.00</p>
+
+                        <h3 class="text-preset-4">Total you'll repay over the term</h3>
+                        <p class="text-preset-2 total-pay" id="total-payment">£0.00</p>
+                    </div>
+                </div>
+            </section>
+        </article>
+    </main>
+    <script src="script.js" type="module" defer></script>
+</body>
+</html>

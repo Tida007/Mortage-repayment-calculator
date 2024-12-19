@@ -1,0 +1,173 @@
+@font-face {
+    font-family: "Plus Jakarta Sans";
+    src: url("./assets/fonts/PlusJakartaSans-VariableFont_wght.ttf") format("truetype");
+    font-weight: 500 700;
+    font-style: normal;
+}
+
+/* colors */
+
+$clr-accent: hsl(61, 70%, 52%);
+$slate-100: hsl(202, 86%, 94%);
+$slate-300: hsl(203, 41%, 72%);
+$slate-500: hsl(200, 26%, 54%);
+$slate-700: hsl(200, 24%, 40%);
+$slate-900: hsl(202, 55%, 16%);
+$white: hsl(0, 0%, 100%);
+$red: hsl(4, 69%, 50%);
+
+/* spacer */
+$spacer-50: 0.25rem;
+$spacer-100: 0.5rem;
+$spacer-150: 0.75rem;
+$spacer-200: 1rem;
+$spacer-300: 1.5rem;
+$spacer-400: 2rem;
+$spacer-500: 2.5rem;
+$spacer-600: 3rem;
+$spacer-700: 3.5rem;
+$spacer-800: 4rem;
+$spacer-900: 4.5rem;
+$spacer-1000: 5rem;
+
+$br-sm: 0.25rem;
+$br: 0.5rem;
+$br-lg: 1.5rem;
+
+/* typography */
+
+$fw-bold: 700;
+$fw-regular: 500;
+
+.text-preset-1 {
+    font-size: 2.5rem;
+    font-weight: $fw-bold;
+    line-height: 125%;
+    letter-spacing: -1px;
+}
+
+.text-preset-2 {
+    font-size: 1.5rem;
+    font-weight: $fw-bold;
+    line-height: 125%;
+    letter-spacing: -1px;
+}
+
+.text-preset-3 {
+    font-size: 1.125rem;
+    font-weight: $fw-bold;
+    line-height: 125%;
+    letter-spacing: -1px;
+}
+
+.text-preset-4 {
+    font-size: 1rem;
+    font-weight: $fw-regular;
+    line-height: 150%;
+    letter-spacing: 0px;
+}
+
+.text-preset-5 {
+    font-size: 0.875rem;
+    font-weight: $fw-regular;
+    line-height: 150%;
+    letter-spacing: 0px;
+}
+
+/* reset */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4 {
+    line-height: 1.2;
+}
+
+body,
+h1,
+h2,
+h3,
+p,
+dl,
+dd,
+figure {
+    margin: 0;
+}
+
+ul[class],
+ol[class] {
+    list-style: none;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+body {
+    font-size: 1rem;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    color: $slate-900;
+    background-color: $slate-100;
+}
+
+
+/* utility */
+
+.container {
+    max-width: 70rem;
+    margin: 0 auto;
+    padding: 0 $spacer-300;
+}
+
+.flow-content > * + * {
+    margin-top: var(--flow-space, 1.5rem);
+}
+
+.split {
+    display: flex;
+    flex-direction: column;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* general */
+
+.cal {
+    max-width: 70rem;
+    margin-inline: auto;
+    background: $white;
+}
+.cal_header {
+    gap: $spacer-100;
+}
+.cal_cal {
+    padding: $spacer-200;
+}
+.cal_clear {
+    display: inline-block;
+    width: fit-content;
+    border: none;
+    background: none;
+    text-decoration: underline;
+    color: $slate-700;
+}
